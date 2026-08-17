@@ -7,6 +7,9 @@ const app=express();
 app.use(express.json());
 // routes
 app.use("/task", taskRoutes);
+app.get("/",(req, res)=>{
+    res.send("To-Do List")
+})
 app.use(errorHandler)
 // port
 const PORT=Number(process.env.PORT) || 3000;
